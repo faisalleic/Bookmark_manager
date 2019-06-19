@@ -1,9 +1,10 @@
 # Bookmark Manager
 
-##Overview:
-# In this project, we will be building a simple bookmark manager web application. The goal of it will be to view, create, update or delete your bookmarks.
+## Overview:
 
-##Setting up database
+In this project, we will be building a simple bookmark manager web application. The goal of it will be to view, create, update or delete your bookmarks.
+
+## Setting up database
 
 1. Connect to psql
 2. Create the database using the psql command CREATE DATABASE bookmark_manager;
