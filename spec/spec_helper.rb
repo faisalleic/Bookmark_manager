@@ -13,6 +13,21 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+# Set the environment to "test"
+ENV['RACK_ENV'] = 'test'
+
+# Bring in the contents of the `app.rb` file
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
+# Require all the testing gems
+require 'capybara'
+require 'capybara/rspec'
+require 'rspec'
+
+# Tell Capybara to talk to BookmarkManager
+Capybara.app = BookmarkManager
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
