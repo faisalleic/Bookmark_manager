@@ -8,7 +8,7 @@ feature 'view homepage ' do
 
   scenario 'view bookmarks' do
     visit '/bookmarks'
-    expect(page).to have_content 'http://www.google.co.uk'
+    expect(page).to have_content 'http://www.google.com'
     expect(page).to have_content 'http://www.youtube.com'
     expect(page).to have_content 'http://www.yahoo.com'
   end
