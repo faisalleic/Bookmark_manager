@@ -6,7 +6,20 @@ In this project, we will be building a simple bookmark manager web application. 
 
 ## Setting up database
 
-1. Connect to psql
-2. Create the database using the psql command CREATE DATABASE bookmark_manager;
-3. Connect to the database using the pqsl command \c bookmark_manager;
-4. Run the query we have saved in the file 01_create_bookmarks_table.sql
+$> psql
+admin=# psql
+admin=# CREATE DATABASE "bookmark-manager";
+admin=# \c bookmark-manager;
+admin=# CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
+admin=# INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com'), ('http://www.google.com'), ('http://destroyallsoftware.com');
+
+
+## Test Database setup:
+
+admin=# CREATE DATABASE bookmark_manager_test;
+admin=# \c bookmark-manager_test;
+admin=# CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
+
+
+Install TablePlus
+From: https://tableplus.io/
